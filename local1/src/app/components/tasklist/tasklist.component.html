@@ -1,0 +1,13 @@
+<div *ngFor="let task of tasks" >
+
+    <div class="card mb-2 ">
+        <div class="card-header d-flex align-item-center justify-content-between">{{task.title}}
+         <div>
+             <button class="btn btn-danger " (click)="deletetask(task)">delete</button>
+             <button class="btn btn-success " (click)="task.hide=!task.hide">show</button>
+         </div>   
+        </div>
+        <div class="card-body" [hidden]="task.hide"> {{task.description}}</div>
+    </div>
+     
+</div>
